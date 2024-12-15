@@ -11,11 +11,16 @@ import Stats from 'ui/home/Stats';
 import Transactions from 'ui/home/Transactions';
 import AdBanner from 'ui/shared/ad/AdBanner';
 
+import WalletMenuDesktop from '../snippets/walletMenu/WalletMenuDesktop';
+import { createWeb3Modal, useWeb3ModalTheme } from '@web3modal/wagmi/react';
+
 const rollupFeature = config.features.rollup;
 
 const Home = () => {
   return (
     <Box as="main">
+
+      <WalletMenuDesktop/>
       <HeroBanner/>
       <Flex flexDir={{ base: 'column', lg: 'row' }} columnGap={ 2 } rowGap={ 1 } mt={ 3 } _empty={{ mt: 0 }}>
         <Stats/>
